@@ -45,6 +45,10 @@ body {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -63,7 +67,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .btn {
@@ -79,6 +82,12 @@ body {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: #ff6c00;
+  color: #ffffff;
 }
 
 .title {
@@ -116,7 +125,8 @@ body {
 /** -----------------------HEADER---------------------- */
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
 }
 
@@ -152,9 +162,11 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 300ms linear;
 }
 
-.header-link:is(:hover, :focus) {
+.header-link:hover,
+.header-link:focus {
   color: #ff6c00;
 }
 
@@ -170,7 +182,23 @@ body {
 
 .header-btn {
   color: #ffffff;
+  margin-right: 17px;
 }
+
+.current {
+  /* position: relative; */
+}
+
+/* .current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -52px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ff6c00;
+} */
 
 /** -----------------------HERO---------------------- */
 
@@ -190,8 +218,27 @@ body {
   padding: 272px 100px 208px 100px;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-item {}
@@ -303,7 +350,7 @@ body {
   background-color: #111319;
   max-width: 1600px;
   margin: 0 auto;
-  background-image: url(../images/prices-bg.png);
+  background-image: url(../images/img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -414,6 +461,7 @@ body {
   height: 133px;
   padding: 20px 24px;
   background-color: #f7f7f7;
+  position: relative;
 }
 
 .benefits-item .count {
@@ -466,7 +514,9 @@ body {
 
 /** -----------------------BARBERS---------------------- */
 
-.barbers {}
+.barbers {
+  background-color: #F7F7F7;
+}
 
 .barbers-top-text {
   color: #303030;
@@ -485,6 +535,29 @@ body {
 
 .barbers-item {
   width: calc((100% - 60px) / 3);
+}
+
+.barbers-item:hover .barbers-cover-text {
+  transform: translate(0);
+}
+
+.barbers-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-cover-text {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff6c00;
+  padding: 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  overflow: auto;
 }
 
 .barbers-subtitle {
@@ -532,16 +605,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #ffffff;
+  color: #ffffff;
+  /* fill: #ffffff; */
+  transition: background-color 300ms linear, color 300ms linear;
 }
 
-/* .barbers-soc-icon {
+.barbers-soc-icon {
   fill: currentColor;
-} */
+}
 
 .barbers-soc-link:hover {
   background-color: teal;
-  fill: violet;
+  color: violet;
 }
 
 /* .barbers-soc-link:hover {
@@ -552,7 +627,10 @@ body {
 } */
 
 /** -----------------------GALLERY---------------------- */
-
+.work-top-text {
+  color: #303030;
+  margin-bottom: 44px;
+}
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
@@ -564,3 +642,123 @@ body {
 .gallery-list li {
   flex-basis: calc((100% - 90px) / 4);
 }
+
+/** -----------------------WRAPPER---------------------- */
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #191C26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: top left calc(50% + 408px);
+  /* background-size: contain; */
+}
+.booking {
+  flex-basis: 570px;
+}
+
+.booking-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.contacts-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+/** -----------------------FOOTER---------------------- */
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footer-soc-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  /* display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px; */
+}
+.footer-soc-link {
+  font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: #303030;
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 36, 0.432);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 300ms linear;
+  padding: 20px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0) rotate(-90deg);
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  background-color: transparent;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* background-position: top left calc(50% + 408px); */
+/* background-color: var(--main-bg-cl);
+background-image: url(../images/contacts/bg-contacts.png);
+background-repeat: no-repeat; */
