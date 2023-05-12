@@ -537,16 +537,16 @@ body {
   width: calc((100% - 60px) / 3);
 }
 
-.barbers-item:hover .barbers-cover-text {
+/* .barbers-item:hover .barbers-cover-text {
   transform: translate(0);
-}
+} */
 
-.barbers-cover-wrap {
+/* .barbers-cover-wrap {
   position: relative;
   overflow: hidden;
-}
+} */
 
-.barbers-cover-text {
+/* .barbers-cover-text {
   position: absolute;
   top: 0;
   font-size: 18px;
@@ -558,7 +558,7 @@ body {
   transform: translateY(100%);
   transition: transform 300ms linear;
   overflow: auto;
-}
+} */
 
 .barbers-subtitle {
   font-weight: 400;
@@ -601,13 +601,13 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: tomato;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #303030;
   /* fill: #ffffff; */
-  transition: background-color 300ms linear, color 300ms linear;
+  transition: color 300ms linear;
 }
 
 .barbers-soc-icon {
@@ -615,8 +615,8 @@ body {
 }
 
 .barbers-soc-link:hover {
-  background-color: teal;
-  color: violet;
+  /* background-color: teal; */
+  color: #ff6c00;
 }
 
 /* .barbers-soc-link:hover {
@@ -667,6 +667,13 @@ body {
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: #ffffff;
+
+  margin-bottom: 45px;
+}
+
+.contacts {
+  flex-basis: 570px;
+  padding-left: 100px;
 }
 
 .contacts-title {
@@ -675,9 +682,29 @@ body {
   line-height: 49px;
   letter-spacing: 0.05em;
   color: #FFFFFF;
+
+  margin-bottom: 40px;
+}
+.contacts-adress {
+  margin-bottom: 70px;
+}
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #9DA4BD;
+}
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts-icon {
+  stroke: #9da4bd
 }
 
 /** -----------------------FOOTER---------------------- */
+.footer {
+  padding: 56px 0;
+}
 
 .footer-container {
   display: flex;
