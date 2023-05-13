@@ -326,6 +326,21 @@
     <div class="wrapper">
       <section class="booking section">
         <h2 class="booking-title title">Online-booking</h2>
+        <form class="booking-form">
+          <div class="booking-field">
+            <input type="text" name="booking-name" id="booking-name" class="booking-input booking-item" required placeholder=" ">
+            <label for="booking-name" class="booking-label">Name*</label>
+          </div>
+          <div class="booking-field">
+            <input type="tel" name="booking-tel" id="booking-tel" class="booking-input booking-item" required placeholder=" ">
+            <label for="booking-tel" class="booking-label">Phone*</label>
+          </div>
+          <div class="booking-field textarea-field">
+            <textarea name="booking-text" id="booking-text" class="booking-text booking-item" placeholder=" "></textarea>
+            <label for="booking-text" class="booking-label">Message</label>
+          </div>
+          <button type="submit" class="btn booking-btn">Send</button>
+        </form>
       </section>
       <section class="contacts section">
         <h2 class="contacts-title title">Contacts</h2>
@@ -379,6 +394,7 @@
       <button class="modal-close-btn" data-modal-close type="button">
         X
       </button>
+      <p class="modal-title">Modal title</p>
     </div>
   </div>
   <script src="./js/modal.js"></script>
