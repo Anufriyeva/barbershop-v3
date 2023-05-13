@@ -859,6 +859,21 @@ body {
   margin-bottom: 20px;
 }
 
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: green;
+  padding-left: 10px;
+}
+.modal-input::placeholder {
+  color: tomato;
+  font-size: 12px;
+}
+
 /* background-position: top left calc(50% + 408px); */
 /* background-color: var(--main-bg-cl);
 background-image: url(../images/contacts/bg-contacts.png);
