@@ -211,57 +211,33 @@ body {
 
 /** -----------------------HERO---------------------- */
 
-.hero {}
+.hero {
+  background-image: var(--bg-gradient), url(../images/bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url(../images/bg-mob-2x.jpg);
+  }
+}
 
 .hero-container {
   display: flex;
 }
 
 .hero-wrap {
-  background-color: #7e8291;
-  background-image: var(--bg-gradient), url(../images/hero-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* background-color: #7e8291; */
   flex-grow: 1;
-  padding: 272px 100px 208px 100px;
+  padding: 210px 0;
 }
 
 .hero-soc {
-  width: 100px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 27px;
-  padding-bottom: 40px;
-}
-
-.hero-list {
-  display: flex;
-  align-items: center;
-  transform: rotate(-90deg) translateY(100%);
-  transform-origin: bottom left;
-  gap: 40px;
-}
-
-.hero-list::before {
-  content: '';
-  width: 60px;
-  height: 1px;
-  background-color: #303030;
-}
-
-.hero-item {}
-
-.hero-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: #303030;
-}
-
-.hero-link:is(:hover, :focus) {
-  color: #ff6c00;
+  display: none;
 }
 
 .hero-top-text {
@@ -271,8 +247,8 @@ body {
 
 .hero-title {
   font-family: 'Raleway', sans-serif;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 46px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: 20px;
@@ -280,7 +256,7 @@ body {
   align-items: baseline; */
 }
 
-.hero-title::before {
+/* .hero-title::before {
   content: '';
   width: 40px;
   height: 40px;
@@ -293,18 +269,19 @@ body {
 .hero-title::after {
   content: '';
   color: teal;
-}
+} */
 
 .hero-title:hover::before {
   opacity: 0;
 }
 
 .hero-bottom-text {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
   color: #9da4bd;
-  max-width: 360px;
+  /* max-width: 360px; */
+  max-width: 320px;
 }
 
 /** -----------------------ABOUT---------------------- */

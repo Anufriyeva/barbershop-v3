@@ -47,7 +47,7 @@
     </div>
   </header> -->
   <main>
-    <!-- <section class="hero">
+    <section class="hero">
       <div class="container hero-container">
         <div class="hero-soc">
           <ul class="hero-list list">
@@ -68,7 +68,7 @@
           </p>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- <section class="about section" id="about">
       <div class="container about-container">
         <ul class="about-list list">
@@ -190,7 +190,9 @@
         <h2 class="barbers-title title">Our barbers</h2>
         <ul class="barbers-list list">
           <li class="barbers-item">
-            <img src="./images/john-smith-photo.jpg" alt="barbers photo" width="370" height="346" />
+            <img 
+            srcset="./images/john-smith-photo-2x.jpg 2x"
+            src="./images/john-smith-photo.jpg" alt="barbers photo" width="370" height="346" />
             <div class="barbers-item-wrap">
               <h3 class="barbers-subtitle">John Smith</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -309,7 +311,16 @@
         <h2 hidden="">our works</h2>
         <ul class="gallery-list list">
           <li>
-            <img src="./images/gallery-img-1.jpg" alt="barber`s work" width="270" height="360" />
+            <picture>
+              <source srcset="./images/gallery-img-1.jpg 1x, ./images/gallery-img-1-2x.jpg 2x"
+              media="(min-width: 1200px)">
+              <source srcset="./images/gallery-img-1-tab.jpg 1x, ./images/gallery-img-1-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/gallery-img-1-mob.jpg 1x, ./images/gallery-img-1-mob-2x.jpg 2x" media="(max-width: 767px)">
+
+              <img src="./images/gallery-img-1-mob.jpg" alt="barber`s work" width="418" height="360" />
+            </picture>
+            
+            
           </li>
           <li>
             <img src="./images/gallery-img-2.jpg" alt="barber`s work" width="270" height="360" />
