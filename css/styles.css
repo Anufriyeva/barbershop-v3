@@ -34,6 +34,9 @@ address {
 
 img {
   display: block;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -66,7 +69,8 @@ body {
 }
 
 .container {
-  width: 1200px;
+  /* width: 1200px; */
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -121,8 +125,10 @@ body {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 /** -----------------------HEADER---------------------- */
@@ -533,11 +539,13 @@ body {
 
 .barbers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .barbers-item {
-  width: calc((100% - 60px) / 3);
+  /* width: calc((100% - 60px) / 3); */
+  width: 100%;
 }
 
 /* .barbers-item:hover .barbers-cover-text {
@@ -604,7 +612,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,7 +622,7 @@ body {
 }
 
 .barbers-soc-icon {
-  fill: currentColor;
+  fill: currentColor;;
 }
 
 .barbers-soc-link:hover {
@@ -632,18 +640,21 @@ body {
 /** -----------------------GALLERY---------------------- */
 .work-top-text {
   color: #303030;
-  margin-bottom: 44px;
+  /* margin-bottom: 44px; */
+  margin-bottom: 71px;
 }
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 30px;
+  /* gap: 50px 30px; */
+  gap: 30px;
   /* row-gap: 50px;
   column-gap: 30px; */
 }
 
 .gallery-list li {
-  flex-basis: calc((100% - 90px) / 4);
+  /* flex-basis: calc((100% - 90px) / 4); */
+  flex-basis: 100%;
 }
 
 /** -----------------------WRAPPER---------------------- */
@@ -1011,3 +1022,5 @@ body {
 /* background-color: var(--main-bg-cl);
 background-image: url(../images/contacts/bg-contacts.png);
 background-repeat: no-repeat; */
+
+
