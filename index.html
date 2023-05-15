@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <!-- <header class="header">
+  <header class="header">
     <div class="container header-container">
       <nav class="header-navigation">
         <a class="header-logo" href>
@@ -44,8 +44,41 @@
       <button class="header-btn btn" data-modal-open type="submit">
         Online-booking
       </button>
+      <button class="menu-open-btn" type="button">
+        <svg class="open-btn" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
     </div>
-  </header> -->
+    <div class="mob-menu">
+      <button class="menu-close-btn" type="button">
+        <svg class="close-btn" width="40" height="40">
+          <use href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="mob-list list">
+          <li class="mob-item list">
+            <a class="mob-link link" href="#about">About</a>
+          </li>
+          <li class="mob-item list">
+            <a class="mob-link link" href="#prices">Services and prices</a>
+          </li>
+          <li class="mob-item list">
+            <a class="mob-link link" href="#barbers">Barbers</a>
+          </li>
+          <li class="mob-item list">
+            <a class="mob-link link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="mob-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="mob-modal-btn btn" data-modal-open type="submit">
+        Online-booking
+      </button>
+      
+    </div>
+  </header>
   <main>
     <section class="hero">
       <div class="container hero-container">
@@ -229,7 +262,9 @@
             </div>
           </li>
           <li class="barbers-item">
-            <img src="./images/michele-doe-photo.jpg" alt="barbers photo" width="370" height="346" />
+            <img 
+            srcset="./images/michele-doe-photo-2x.jpg 2x"
+            src="./images/michele-doe-photo.jpg" alt="barbers photo" width="370" height="346" />
             <div class="barbers-item-wrap">
               <h3 class="barbers-subtitle">Michele Doe</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -266,7 +301,9 @@
             </div>
           </li>
           <li class="barbers-item">
-            <img src="./images/alan-black-photo.jpg" alt="barbers photo" width="370" height="346" />
+            <img 
+            srcset="./images/alan-black-photo-2x.jpg 2x"
+            src="./images/alan-black-photo.jpg" alt="barbers photo" width="370" height="346" />
             <div class="barbers-item-wrap">
               <h3 class="barbers-subtitle">Alan Black</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -323,13 +360,33 @@
             
           </li>
           <li>
-            <img src="./images/gallery-img-2.jpg" alt="barber`s work" width="270" height="360" />
+            <picture>
+              <source srcset="./images/gallery-img-2.jpg 1x, ./images/gallery-img-2-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/gallery-img-2-tab.jpg 1x, ./images/gallery-img-2-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/gallery-img-2-mob.jpg 1x, ./images/gallery-img-2-mob-2x.jpg 2x" media="(max-width: 767px)">
+            
+              <img src="./images/gallery-img-2-mob.jpg" alt="barber`s work" width="418" height="360" />
+            </picture>
+            
           </li>
           <li>
-            <img src="./images/gallery-img-3.jpg" alt="barber`s work" width="270" height="360" />
+            <picture>
+              <source srcset="./images/gallery-img-3.jpg 1x, ./images/gallery-img-3-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/gallery-img-3-tab.jpg 1x, ./images/gallery-img-3-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/gallery-img-3-mob.jpg 1x, ./images/gallery-img-3-mob-2x.jpg 2x" media="(max-width: 767px)">
+            
+              <img src="./images/gallery-img-3-mob.jpg" alt="barber`s work" width="418" height="360" />
+            </picture>
+  
           </li>
           <li>
-            <img src="./images/gallery-img-4.jpg" alt="barber`s work" width="270" height="360" />
+            <picture>
+              <source srcset="./images/gallery-img-4.jpg 1x, ./images/gallery-img-4-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/gallery-img-4-tab.jpg 1x, ./images/gallery-img-4-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/gallery-img-4-mob.jpg 1x, ./images/gallery-img-4-mob-2x.jpg 2x" media="(max-width: 767px)">
+            
+              <img src="./images/gallery-img-4-mob.jpg" alt="barber`s work" width="418" height="360" />
+            </picture>
           </li>
         </ul>
         <div class="container"></div>
